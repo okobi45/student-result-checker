@@ -1,52 +1,16 @@
-# student-result-checker
+# React + Vite
 
-A secure web application for managing and viewing student academic results. Developed as a final-year project with a focus on secure web application development practices.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Overview
+Currently, two official plugins are available:
 
-The application supports two user roles: students, who can view their own academic results, and lecturers, who can create, update, and delete results for the courses they teach. Security has been considered throughout every phase of the development lifecycle, from requirements and design to implementation and testing.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Tech Stack
+## React Compiler
 
-### Frontend
-- React (with Vite)
-- React Router
-- React-Bootstrap
-- Axios
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Backend
-- Node.js
-- Express
-- Prisma ORM
+## Expanding the ESLint configuration
 
-### Database
-- SQLite
-
-### Security
-- bcrypt for password hashing
-- JWT authentication via HTTP-only cookies
-- Helmet for secure HTTP headers
-- CORS configured restrictively
-- express-rate-limit for brute-force protection
-- express-validator for server-side input validation
-- CSRF protection
-- Winston for audit logging
-
-## Project Structure
-
-\`\`\`
-student-result-checker/
-├── backend/      # Express API server
-├── frontend/     # React + Vite client
-└── docs/         # Documentation, diagrams, screenshots
-\`\`\`
-
-## Setup
-
-Setup and installation instructions will be provided as the project structure is finalised.
-
-## Security
-
-A detailed list of implemented security features and the threats they mitigate can be found in the project report.
-
-## License
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
