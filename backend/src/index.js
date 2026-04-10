@@ -1,12 +1,25 @@
 import express from 'express';
+import cookieParser from 'cookie-parser';
 import prisma from './lib/prisma.js';
+import authRoutes from './routes/auth.routes.js';
+
+
+
 const app = express();
 
-//
-app.use(express.json({ limit: '10kb' }));
+
+app.use(express.json({
+    limit: '10kb'
+}));
+app.use(cookieParser());
+
+app.use('/auth', authRoutes);
 
 app.get('/health', (req, res) => {
-    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+    res.json({
+        status: 'ok',
+        timestamp: new Date().toISOString()
+    });
 });
 
 //server port start on port 3000
