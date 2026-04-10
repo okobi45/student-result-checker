@@ -29,7 +29,7 @@ export function verifyToken(token) {
 export const COOKIE_OPTIONS = {
     httpOnly: true,
     secure: IS_PRODUCTION,
-    sameSite: IS_PRODUCTION ? 'strict',
+    sameSite: IS_PRODUCTION ? 'strict' : 'lax',
     maxAge: 1000 * 60 * 60, // 1 hour
 };
 
