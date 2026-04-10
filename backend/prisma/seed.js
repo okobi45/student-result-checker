@@ -9,7 +9,7 @@ const prisma = new PrismaClient();
 const BCRYPT_COST = 12;
 
 //This is for shared dev purpose 
-//In production all users would set their own password
+//In production i'll set all users to have their own password
 const DEMO_PASSWORD = 'Password123!';
 
 async function main() {
