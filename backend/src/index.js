@@ -3,6 +3,7 @@ import cookieParser from 'cookie-parser';
 import prisma from './lib/prisma.js';
 import authRoutes from './routes/auth.routes.js';
 import resultsRoutes from './routes/results.routes.js';
+import coursesRoutes from './routes/courses.routes.js';
 
 
 
@@ -17,6 +18,8 @@ app.use(cookieParser());
 app.use('/auth', authRoutes);
 
 app.use('/results', resultsRoutes);
+
+app.use('/courses', coursesRoutes);
 
 app.get('/health', (req, res) => {
     res.json({
