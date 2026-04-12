@@ -4,7 +4,7 @@ import prisma from './lib/prisma.js';
 import authRoutes from './routes/auth.routes.js';
 import resultsRoutes from './routes/results.routes.js';
 import coursesRoutes from './routes/courses.routes.js';
-
+import adminRoutes from './routes/admin.routes.js';
 
 
 const app = express();
@@ -20,6 +20,8 @@ app.use('/auth', authRoutes);
 app.use('/results', resultsRoutes);
 
 app.use('/courses', coursesRoutes);
+
+app.use('/admin', adminRoutes);
 
 app.get('/health', (req, res) => {
     res.json({
